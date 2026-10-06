@@ -285,21 +285,62 @@
       font-weight: 900;
     }
 
-    /* GALLERY */
+/* GALLERY */
 
-    .gallery-placeholder {
-      min-height: 370px;
-      border-radius: 12px;
-      background: #222;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      font-size: 24px;
-      font-weight: 900;
-    }
+.slideshow {
+  position: relative;
+  max-width: 950px;
+  height: 560px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-prev,
+.slide-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.65);
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 12px 17px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.slide-prev {
+  left: 15px;
+}
+
+.slide-next {
+  right: 15px;
+}
+
+.slide-prev:hover,
+.slide-next:hover {
+  background: #d71920;
+}
+
+@media (max-width: 700px) {
+  .slideshow {
+    height: 400px;
+  }
+}
 
     /* BACKDROPS */
 
@@ -600,9 +641,36 @@
       Photo Booths of Dallas events.
     </p>
 
-    <div class="gallery-placeholder">
-      Recent Event Photo Slideshow Coming Here
-    </div>
+    <div class="slideshow">
+
+  <img class="slide active"
+       src="Photo%20Booths%20of%20Dallas%2010426.jpg"
+       alt="Photo Booths of Dallas recent event">
+
+  <img class="slide"
+       src="Photo%20Booths%20of%20Dallas%20in%20Van%20Alstyne.jpg"
+       alt="Photo Booths of Dallas wedding in Van Alstyne Texas">
+
+  <img class="slide"
+       src="Photo%20Booths%20of%20Dallas%20at%20Solar%20Turbines.jpg"
+       alt="Photo Booths of Dallas corporate event at Solar Turbines">
+
+  <img class="slide"
+       src="photo%20booths%20of%20dallas%2010226C.jpg"
+       alt="Guests enjoying Photo Booths of Dallas">
+
+  <img class="slide"
+       src="photo%20booths%20of%20dallas%2010226b.jpg"
+       alt="Photo Booths of Dallas event photo booth">
+
+  <img class="slide"
+       src="DJ%20Tommy%20Scott%2010226.jpg"
+       alt="DJ Tommy Scott and Photo Booths of Dallas event">
+
+  <button class="slide-prev" onclick="changeSlide(-1)" aria-label="Previous photo">&#10094;</button>
+  <button class="slide-next" onclick="changeSlide(1)" aria-label="Next photo">&#10095;</button>
+
+</div>
 
   </div>
 </section>
@@ -784,6 +852,24 @@
   </p>
 
 </footer>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
 
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+
+  slideIndex = (index + slides.length) % slides.length;
+  slides[slideIndex].classList.add('active');
+}
+
+function changeSlide(direction) {
+  showSlide(slideIndex + direction);
+}
+
+setInterval(() => {
+  showSlide(slideIndex + 1);
+}, 5000);
+</script>
 </body>
 </html>
