@@ -54,20 +54,18 @@
       gap: 25px;
     }
 
-    .brand {
-      font-size: 27px;
-      font-weight: 900;
-      color: #d71920;
-      text-decoration: none;
-      line-height: 1;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-    .brand span {
-      display: block;
-      color: #111;
-      font-size: 15px;
-      margin-top: 5px;
-    }
+.brand img {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+}
 
     nav {
       display: flex;
@@ -421,10 +419,10 @@
 
 <header>
   <div class="container nav">
-    <a class="brand" href="/">
-      PhotoBooths
-      <span>of Dallas</span>
-    </a>
+<a class="brand" href="/">
+  <img src="Photo%20Booths%20of%20Dallas%20Logo%202026.png"
+       alt="Photo Booths of Dallas - Dallas Fort Worth Photo Booth Rentals">
+</a>
 
     <nav>
       <a href="/">Home</a>
