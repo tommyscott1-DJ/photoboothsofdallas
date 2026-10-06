@@ -247,7 +247,48 @@
       font-size: 20px;
       font-weight: 900;
     }
+/* WEDDINGS */
 
+.wedding-content {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 35px;
+  align-items: center;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.wedding-content h3 {
+  font-size: 30px;
+  margin-top: 0;
+  color: #d71920;
+}
+
+.wedding-content p {
+  font-size: 18px;
+}
+
+.wedding-highlight {
+  background: #111;
+  color: white;
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.wedding-big-text {
+  color: #f3c74f;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+  .wedding-content {
+    grid-template-columns: 1fr;
+  }
+}
     /* PRICING */
 
     .price-box {
