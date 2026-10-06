@@ -1,213 +1,785 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Photo Booths of Dallas | Photo Booth Rentals in DFW</title>
-    <meta name="description" content="Photo Booths of Dallas offers Classic Enclosed and Open-Air photo booth rentals for weddings, corporate events, quinceañeras, birthdays and parties throughout the Dallas-Fort Worth area.">
+  <title>Photo Booth Rentals Dallas TX | Photo Booths of Dallas</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta name="description" content="Photo Booths of Dallas offers Classic Enclosed and Open-Air photo booth rentals in Dallas-Fort Worth. Celebrating 15 years in business. Instant prints, touch screen, digital sharing, props and professional attendants.">
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            text-align: center;
-        }
+  <link rel="canonical" href="https://www.photoboothsofdallas.com/">
 
-        .top {
-            background: #111;
-            color: white;
-            padding: 45px 20px 40px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        .brand {
-            font-size: clamp(36px, 7vw, 64px);
-            font-weight: 800;
-            margin: 0;
-            letter-spacing: -1px;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .tagline {
-            margin: 8px 0 0;
-            font-size: 19px;
-            color: #ddd;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #191919;
+      background: #fff;
+      line-height: 1.6;
+    }
 
-        .card {
-            width: min(900px, 92%);
-            margin: 35px auto;
-            background: white;
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 8px 30px rgba(0,0,0,.12);
-        }
+    a {
+      color: inherit;
+    }
 
-        h1 {
-            font-size: clamp(30px, 5vw, 46px);
-            margin: 0 0 10px;
-        }
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
 
-        .open {
-            font-size: 24px;
-            font-weight: bold;
-            color: #16823b;
-            margin: 15px 0;
-        }
+    /* HEADER */
 
-        .intro {
-            font-size: 19px;
-            line-height: 1.6;
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .services {
-            font-size: 18px;
-            line-height: 1.8;
-            font-weight: bold;
-            margin: 25px 0;
-        }
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
 
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 28px;
-        }
+    .brand {
+      font-size: 27px;
+      font-weight: 900;
+      color: #d71920;
+      text-decoration: none;
+      line-height: 1;
+    }
 
-        .button {
-            display: inline-block;
-            padding: 15px 22px;
-            border-radius: 8px;
-            background: #111;
-            color: white;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: bold;
-            min-width: 210px;
-        }
+    .brand span {
+      display: block;
+      color: #111;
+      font-size: 15px;
+      margin-top: 5px;
+    }
 
-        .button:hover {
-            opacity: .82;
-        }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-weight: 700;
+      font-size: 14px;
+    }
 
-        .facebook {
-            background: #1877f2;
-        }
+    nav a {
+      text-decoration: none;
+    }
 
-        .contact {
-            margin-top: 32px;
-            line-height: 1.8;
-            font-size: 18px;
-        }
+    nav a:hover {
+      color: #d71920;
+    }
 
-        .contact a {
-            color: #222;
-            font-weight: bold;
-        }
+    .nav-cta {
+      background: #d71920;
+      color: white !important;
+      padding: 12px 18px;
+      border-radius: 6px;
+    }
 
-        .service-area {
-            margin-top: 30px;
-            font-size: 17px;
-            color: #555;
-        }
+    /* HERO */
 
-        footer {
-            padding: 5px 20px 35px;
-            color: #666;
-            font-size: 15px;
-        }
+    .hero {
+      background:
+        linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.70)),
+        linear-gradient(135deg, #222, #555);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
 
-        @media (max-width: 600px) {
-            .card {
-                padding: 30px 18px;
-            }
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.05;
+      margin: 0 0 12px;
+    }
 
-            .button {
-                width: 100%;
-            }
-        }
-    </style>
+    .tagline {
+      font-size: clamp(23px, 3vw, 36px);
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .anniversary {
+      display: inline-block;
+      margin: 18px 0;
+      padding: 9px 18px;
+      border: 2px solid #f3c74f;
+      color: #f3c74f;
+      font-weight: 900;
+      border-radius: 30px;
+      letter-spacing: .5px;
+    }
+
+    .hero-description {
+      max-width: 800px;
+      margin: 10px auto 28px;
+      font-size: 19px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .button-primary {
+      background: #d71920;
+      color: white;
+    }
+
+    .button-secondary {
+      background: white;
+      color: #111;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 70px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.15;
+      margin: 0 0 15px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+    }
+
+    .light {
+      background: #f5f5f5;
+    }
+
+    /* BOOTHS */
+
+    .booth-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .booth-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .booth-placeholder {
+      min-height: 270px;
+      background: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .booth-content {
+      padding: 28px;
+    }
+
+    .booth-content h3 {
+      font-size: 27px;
+      margin: 0 0 5px;
+    }
+
+    .booth-subtitle {
+      color: #d71920;
+      font-weight: 900;
+      margin-top: 0;
+    }
+
+    /* FEATURES */
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 22px;
+      border-radius: 10px;
+      background: #f5f5f5;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    /* PRICING */
+
+    .price-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 14px;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .price {
+      color: #f3c74f;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .price-box ul {
+      max-width: 650px;
+      margin: 28px auto;
+      padding-left: 25px;
+      text-align: left;
+      columns: 2;
+    }
+
+    .memory-book {
+      margin: 25px auto;
+      padding: 15px;
+      max-width: 650px;
+      border: 1px solid #f3c74f;
+      border-radius: 8px;
+      color: #f3c74f;
+      font-weight: 900;
+    }
+
+    /* GALLERY */
+
+    .gallery-placeholder {
+      min-height: 370px;
+      border-radius: 12px;
+      background: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    /* BACKDROPS */
+
+    .backdrops {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .backdrop {
+      min-height: 170px;
+      background: #eee;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      padding: 15px;
+    }
+
+    /* ANNIVERSARY */
+
+    .years {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .years h2 {
+      color: #f3c74f;
+    }
+
+    .years p {
+      max-width: 850px;
+      margin: 15px auto;
+      font-size: 19px;
+    }
+
+    .real-fun {
+      font-size: 25px !important;
+      font-weight: 900;
+    }
+
+    /* SEO */
+
+    .cities,
+    .venues {
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .cities a,
+    .venues a {
+      font-weight: 700;
+      color: #333;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    footer .phone {
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .booth-grid,
+      .feature-row {
+        grid-template-columns: 1fr;
+      }
+
+      .backdrops {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .price-box ul {
+        columns: 1;
+      }
+
+      .hero {
+        padding: 65px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header class="top">
-        <div class="brand">PHOTO BOOTHS OF DALLAS</div>
-        <div class="tagline">The Most Fun You'll Have at Your Own Party!</div>
-    </header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/">
+      PhotoBooths
+      <span>of Dallas</span>
+    </a>
 
-    <main class="card">
+    <nav>
+      <a href="/">Home</a>
+      <a href="#booths">Photo Booths</a>
+      <a href="#weddings">Weddings</a>
+      <a href="#corporate">Corporate Events</a>
+      <a href="#backdrops">Backdrops</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#availability">Check Your Date</a>
+    </nav>
+  </div>
+</header>
 
-        <h1>Our New Website Is Coming Soon!</h1>
 
-        <div class="open">We are OPEN and booking events!</div>
+<main>
 
-        <p class="intro">
-            We're giving our website a brand-new look, but Photo Booths of Dallas
-            is still here and ready to make your event unforgettable.
-        </p>
+<section class="hero">
+  <div class="container">
 
-        <div class="services">
-            Classic Enclosed Photo Booth &bull; Open-Air Photo Booth<br>
-            Weddings &bull; Corporate Events &bull; Quinceañeras<br>
-            Birthdays &bull; School Events &bull; Parties
+    <h1>Photo Booth Rentals in Dallas–Fort Worth</h1>
+
+    <div class="tagline">
+      The Most Fun You'll Have at Your Own Party!
+    </div>
+
+    <div class="anniversary">
+      CELEBRATING 15 YEARS IN BUSINESS • SERVING DFW SINCE 2011
+    </div>
+
+    <p class="hero-description">
+      Classic Enclosed &amp; Open-Air Photo Booths for weddings,
+      corporate events, quinceañeras, birthdays, school events
+      and celebrations throughout Dallas–Fort Worth.
+    </p>
+
+    <div class="buttons">
+      <a class="button button-primary" href="#availability">
+        Check Your Date
+      </a>
+
+      <a class="button button-secondary" href="#booths">
+        Explore Our Photo Booths
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="booths">
+  <div class="container">
+
+    <h2>Two Photo Booth Styles. One Unforgettable Experience.</h2>
+
+    <p class="section-intro">
+      Photo Booths of Dallas has been bringing fun to DFW events since 2011.
+      Choose the privacy and nostalgia of our Classic Enclosed Photo Booth
+      or the big-group fun of our Open-Air Photo Booth.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature">Touch Screen</div>
+      <div class="feature">Instant Prints</div>
+      <div class="feature">Digital Sharing</div>
+    </div>
+
+    <br><br>
+
+    <div class="booth-grid">
+
+      <article class="booth-card">
+        <div class="booth-placeholder">
+          Classic Enclosed Photo Booth Photo
         </div>
 
-        <p class="intro">
-            Enjoy instant photo-strip printing, fun props and a photo booth
-            experience your guests will remember long after the party is over.
-        </p>
+        <div class="booth-content">
+          <h3>Classic Enclosed Photo Booth</h3>
+          <p class="booth-subtitle">The Real Photo Booth Experience</p>
 
-        <div class="buttons">
+          <p>
+            Step inside, close the curtain and have some fun!
+            Our Classic Enclosed Photo Booth gives your guests the
+            privacy to loosen up, be silly and create memorable photo strips.
+          </p>
+        </div>
+      </article>
 
-            <a class="button" href="tel:+12147243165">
-                Call / Text 214-724-3165
-            </a>
 
-            <a class="button" href="mailto:info@photoboothsofdallas.com">
-                Email Photo Booths of Dallas
-            </a>
-
-            <a class="button facebook"
-               href="https://www.facebook.com/photoboothsofdallas"
-               target="_blank" rel="noopener">
-                Visit Us on Facebook
-            </a>
-
-            <a class="button"
-               href="https://www.djtommyscott.com/photo-booths-of-dallas"
-               target="_blank" rel="noopener">
-                Photo Booth Info &amp; Booking
-            </a>
-
+      <article class="booth-card">
+        <div class="booth-placeholder">
+          Open-Air Photo Booth Photo
         </div>
 
-        <div class="contact">
-            <strong>Photo Booths of Dallas</strong><br>
-            <a href="tel:+12147243165">214-724-3165</a><br>
-            <a href="mailto:info@photoboothsofdallas.com">
-                info@photoboothsofdallas.com
-            </a>
+        <div class="booth-content">
+          <h3>Open-Air Photo Booth</h3>
+          <p class="booth-subtitle">Big Groups. Big Fun.</p>
+
+          <p>
+            Fit more friends into every picture. Grab some props,
+            choose your favorite backdrop and get everyone together
+            for a fun photo booth experience.
+          </p>
+
+          <strong>Choose from 16 backdrop options!</strong>
         </div>
+      </article>
 
-        <div class="service-area">
-            Proudly serving Dallas, Collin &amp; Rockwall Counties
-            and the Dallas-Fort Worth area.
-        </div>
+    </div>
+  </div>
+</section>
 
-    </main>
 
-    <footer>
-        &copy; 2026 Photo Booths of Dallas. All Rights Reserved.
-    </footer>
+<section class="light">
+  <div class="container">
+
+    <h2>Photo Booth Rentals Starting at $450</h2>
+
+    <p class="section-intro">
+      Up to 3 hours of photo booth fun. Additional hours are $100 each.
+    </p>
+
+    <div class="price-box">
+
+      <div class="price">$450</div>
+      <strong>UP TO 3 HOURS</strong>
+
+      <ul>
+        <li>Delivery &amp; setup</li>
+        <li>Friendly attendant</li>
+        <li>Unlimited photo sessions</li>
+        <li>Touch-screen operation</li>
+        <li>Instant high-quality prints</li>
+        <li>Digital sharing by text/email</li>
+        <li>Fun props</li>
+        <li>Live preview monitor</li>
+        <li>Color or black &amp; white photos</li>
+        <li>Personalized photo-strip design</li>
+        <li>Flash drive with event photos</li>
+      </ul>
+
+      <div class="memory-book">
+        Weddings &amp; Birthday Parties:
+        Scrapbook / Memory Book Included
+      </div>
+
+      <p>
+        Standard pricing applies in Dallas, Collin and Rockwall Counties.
+        Other DFW and North Texas locations are available by quote.
+      </p>
+
+      <a class="button button-primary" href="#availability">
+        Check Your Date
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <h2>See the Fun!</h2>
+
+    <p class="section-intro">
+      Real Events. Real Guests. Real Photo Booth Fun.
+      We regularly update our gallery with photos from recent
+      Photo Booths of Dallas events.
+    </p>
+
+    <div class="gallery-placeholder">
+      Recent Event Photo Slideshow Coming Here
+    </div>
+
+  </div>
+</section>
+
+
+<section id="backdrops" class="light">
+  <div class="container">
+
+    <h2>Choose From 16 Backdrops</h2>
+
+    <p class="section-intro">
+      Make your Open-Air Photo Booth match your event.
+      Choose from 16 different backdrop options including elegant
+      sparkles, greenery, florals, wood, classic white,
+      patriotic designs and more.
+    </p>
+
+    <div class="backdrops">
+      <div class="backdrop">Gold Sparkle</div>
+      <div class="backdrop">Silver Sparkle</div>
+      <div class="backdrop">Champagne Sparkle</div>
+      <div class="backdrop">Rose Gold Sparkle</div>
+      <div class="backdrop">Hedge with Love</div>
+      <div class="backdrop">3D White Flowers</div>
+      <div class="backdrop">Cherry Blossoms</div>
+      <div class="backdrop">Light Wood</div>
+    </div>
+
+    <div class="buttons">
+      <a class="button button-primary" href="#contact">
+        View All 16 Backdrops
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="years">
+  <div class="container">
+
+    <h2>Celebrating 15 Years of Photo Booth Fun!</h2>
+
+    <p><strong>Serving Dallas–Fort Worth Since 2011</strong></p>
+
+    <p>
+      For 15 years, Photo Booths of Dallas has been helping guests
+      loosen up, laugh and take home memories from weddings,
+      birthdays, corporate events, quinceañeras, school events
+      and celebrations throughout DFW.
+    </p>
+
+    <p class="real-fun">
+      Real Photo Booths. Real Prints. Real Fun.
+    </p>
+
+  </div>
+</section>
+
+
+<section id="areas">
+  <div class="container">
+
+    <h2>Photo Booth Rentals Across Dallas–Fort Worth</h2>
+
+    <p class="section-intro">
+      Based in Wylie, Photo Booths of Dallas serves weddings,
+      corporate events, birthdays, quinceañeras, schools and
+      celebrations throughout DFW and North Texas.
+    </p>
+
+    <div class="cities">
+      <strong>
+        Dallas • Plano • Frisco • McKinney • Wylie • Rockwall •
+        Richardson • Garland • Rowlett • Allen • Sachse • Murphy •
+        and communities throughout North Texas
+      </strong>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="light">
+  <div class="container">
+
+    <h2>DFW Venues We've Worked</h2>
+
+    <p class="section-intro">
+      Photo Booths of Dallas has entertained guests at wedding venues,
+      hotels, corporate facilities and event spaces throughout North Texas.
+    </p>
+
+    <div class="venues">
+      The Cinnamon Barn • Verona Villa • Blue Heron Landing &amp; Events Venue •
+      The White Sparrow • Event1013 • The Springs Weddings &amp; Events •
+      McKinney Flour Mill • Aristide McKinney • D'Vine Grace Vineyard •
+      Plano Event Center • Kay Bailey Hutchison Convention Center •
+      Fort Worth Stockyards Station • Hilton Anatole Dallas •
+      and many more.
+    </div>
+
+  </div>
+</section>
+
+
+<section id="availability" class="contact">
+  <div class="container">
+
+    <h2>Is Your Date Available?</h2>
+
+    <p class="section-intro">
+      Dates fill up fast. Check your date and take the first step
+      toward adding Photo Booths of Dallas to your celebration.
+    </p>
+
+    <div class="buttons">
+      <a class="button button-primary" href="#contact">
+        Check Your Date Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact" class="light contact">
+  <div class="container">
+
+    <h2>Let's Make Your Event Fun!</h2>
+
+    <p>
+      Call, text or email Photo Booths of Dallas.
+    </p>
+
+    <div class="contact-links">
+
+      <a class="button button-primary" href="tel:2147243165">
+        Call / Text 214-724-3165
+      </a>
+
+      <a class="button button-secondary"
+         href="mailto:info@photoboothsofdallas.com">
+        Email Us
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+
+  <strong>Photo Booths of Dallas</strong>
+
+  <div>
+    The Most Fun You'll Have at Your Own Party!
+  </div>
+
+  <p class="phone">
+    <a href="tel:2147243165">214-724-3165</a>
+  </p>
+
+  <p>
+    <a href="mailto:info@photoboothsofdallas.com">
+      info@photoboothsofdallas.com
+    </a>
+  </p>
+
+  <p>
+    Serving Dallas–Fort Worth &amp; North Texas Since 2011
+  </p>
+
+  <p>
+    &copy; 2026 Photo Booths of Dallas
+  </p>
+
+</footer>
 
 </body>
 </html>
