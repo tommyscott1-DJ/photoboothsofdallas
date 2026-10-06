@@ -342,27 +342,46 @@
   }
 }
 
-    /* BACKDROPS */
+   /* BACKDROPS */
 
-    .backdrops {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      margin: 30px 0;
-    }
+.backdrop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 35px 0;
+}
 
-    .backdrop {
-      min-height: 170px;
-      background: #eee;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: 800;
-      padding: 15px;
-    }
+.backdrop-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,.12);
+  text-align: center;
+  font-weight: 800;
+}
+
+.backdrop-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.backdrop-card div {
+  padding: 12px 8px;
+}
+
+@media (max-width: 850px) {
+  .backdrop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .backdrop-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
     /* ANNIVERSARY */
 
@@ -688,22 +707,89 @@
       patriotic designs and more.
     </p>
 
-    <div class="backdrops">
-      <div class="backdrop">Gold Sparkle</div>
-      <div class="backdrop">Silver Sparkle</div>
-      <div class="backdrop">Champagne Sparkle</div>
-      <div class="backdrop">Rose Gold Sparkle</div>
-      <div class="backdrop">Hedge with Love</div>
-      <div class="backdrop">3D White Flowers</div>
-      <div class="backdrop">Cherry Blossoms</div>
-      <div class="backdrop">Light Wood</div>
-    </div>
+    <div class="backdrop-grid">
 
-    <div class="buttons">
-      <a class="button button-primary" href="#contact">
-        View All 16 Backdrops
-      </a>
-    </div>
+  <div class="backdrop-card">
+    <img src="Photo%20Booths%20of%20Dallas%20Gold%20Balloons.jpg" alt="Gold Balloons photo booth backdrop">
+    <div>Gold Balloons</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Photo%20Booths%20of%20Dallas%20Gold%20Sparkle.jpg" alt="Gold Sparkle photo booth backdrop">
+    <div>Gold Sparkle</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="3D%20White%20Flowers%20Photo%20Booths%20of%20Dallas.jpg" alt="3D White Flowers photo booth backdrop">
+    <div>3D White Flowers</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Grand%20Staircase%20Photo%20Booths%20of%20Dallas.jpg" alt="Grand Staircase photo booth backdrop">
+    <div>Grand Staircase</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="pink%20sparkle%20photo%20booths%20of%20dallas.png" alt="Pink Sparkle photo booth backdrop">
+    <div>Pink Sparkle</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Silver%20Sparkle%20photo%20booths%20of%20dallas.png" alt="Silver Sparkle photo booth backdrop">
+    <div>Silver Sparkle</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="hedge%20with%20love%20photo%20booths%20of%20dallas.png" alt="Hedge with Love photo booth backdrop">
+    <div>Hedge with Love</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Light%20Wood%20Planks%20photo%20booths%20of%20dallas.png" alt="Light Wood Planks photo booth backdrop">
+    <div>Light Wood Planks</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="cherry%20blossoms%20photo%20booths%20of%20dallas.png" alt="Cherry Blossoms photo booth backdrop">
+    <div>Cherry Blossoms</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Light%20Wood%20photo%20Booths%20of%20Dallas.jpg" alt="Light Wood photo booth backdrop">
+    <div>Light Wood</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Rosegold%20Sparkle%20Photo%20Booths%20of%20Dallas.png" alt="Rose Gold Sparkle photo booth backdrop">
+    <div>Rose Gold Sparkle</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Champagne%20Sparkle%20Photo%20Booths%20of%20Dallas.png" alt="Champagne Sparkle photo booth backdrop">
+    <div>Champagne Sparkle</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Horizontal%20Wood%20Photo%20Booths%20of%20Dallas.png" alt="Horizontal Wood photo booth backdrop">
+    <div>Horizontal Wood</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Gold%20%26%20Black%20Photo%20Booths%20of%20Dallas.png" alt="Gold and Black photo booth backdrop">
+    <div>Gold &amp; Black</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="Patrtiotic%20Photo%20Booths%20of%20Dallas.png" alt="Patriotic photo booth backdrop">
+    <div>Patriotic</div>
+  </div>
+
+  <div class="backdrop-card">
+    <img src="White%20Photo%20Booths%20of%20Dallas.jpg" alt="Plain White photo booth backdrop">
+    <div>Plain White</div>
+  </div>
+
+</div>
 
   </div>
 </section>
