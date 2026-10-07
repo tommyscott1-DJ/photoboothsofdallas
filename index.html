@@ -342,7 +342,7 @@
     height: 400px;
   }
 }
-    /* AUDIO GUEST BOOK */
+   /* AUDIO GUEST BOOK */
 
 .audio-guest-content {
   display: grid;
@@ -424,7 +424,7 @@
   .audio-guest-slideshow {
     height: 400px;
   }
-}
+} 
 /* CORPORATE EVENTS */
 
 .corporate-content {
@@ -1584,89 +1584,7 @@ setInterval(() => {
   showWeddingSlide(weddingSlideIndex + 1);
 }, 2000);
 </script>
-  /* AUDIO GUEST BOOK */
 
-.audio-guest-content {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 35px;
-  align-items: center;
-  max-width: 1050px;
-  margin: auto;
-}
-
-.audio-guest-text h3 {
-  font-size: 30px;
-  margin-top: 0;
-  color: #d71920;
-}
-
-.audio-guest-text p {
-  font-size: 18px;
-}
-
-.audio-price {
-  font-size: 20px !important;
-  margin: 25px 0;
-}
-
-.audio-guest-slideshow {
-  position: relative;
-  width: 100%;
-  height: 430px;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #111;
-  box-shadow: 0 5px 20px rgba(0,0,0,.15);
-}
-
-.audio-guest-slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.audio-guest-slide.active {
-  display: block;
-}
-
-.audio-prev,
-.audio-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,.65);
-  color: white;
-  border: none;
-  font-size: 28px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.audio-prev {
-  left: 12px;
-}
-
-.audio-next {
-  right: 12px;
-}
-
-.audio-prev:hover,
-.audio-next:hover {
-  background: #d71920;
-}
-
-@media (max-width: 850px) {
-  .audio-guest-content {
-    grid-template-columns: 1fr;
-  }
-
-  .audio-guest-slideshow {
-    height: 400px;
-  }
-}
 <script>
 let corporateSlideIndex = 0;
 const corporateSlides = document.querySelectorAll('.corporate-slide');
