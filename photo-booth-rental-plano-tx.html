@@ -34,6 +34,91 @@
 }</script>
 <style>
 *{box-sizing:border-box}body{margin:0;color:#222;font:17px/1.65 Arial,Helvetica,sans-serif}a{color:#a51219}header{border-bottom:1px solid #ddd;background:#fff}.wrap{max-width:1100px;margin:auto;padding:20px}nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}nav img{width:185px;max-width:100%}.links{display:flex;gap:18px;flex-wrap:wrap;font-weight:700}.hero{background:#171717;color:#fff;padding:55px 0}.hero .wrap,.split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}.hero img,.split img{width:100%;max-height:460px;object-fit:contain;border-radius:12px}.hero img{background:#282828}h1{font-size:clamp(35px,5vw,55px);line-height:1.12;margin:0 0 15px}h2{font-size:clamp(27px,3.5vw,37px);line-height:1.2}.eyebrow{color:#f4cf60;font-weight:700}.btn{display:inline-block;padding:13px 22px;background:#d71920;color:white;text-decoration:none;border-radius:6px;font-weight:bold;margin:8px 8px 8px 0}.btn.light{background:white;color:#171717}.section{padding:40px 0}.muted{background:#f6f6f6}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.panel{border:1px solid #ddd;border-radius:10px;padding:24px;background:#fff}.panel h3{margin-top:0}.bullets{padding-left:23px}.faq h3{margin-bottom:4px}footer{background:#171717;color:white;text-align:center;padding:35px 15px}footer a{color:white}@media(max-width:760px){.hero .wrap,.split,.grid{grid-template-columns:1fr}.hero{padding:25px 0}}
+/* AUDIO GUEST BOOK */
+
+.audio-guest-content {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 35px;
+  align-items: center;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.audio-guest-text h3 {
+  font-size: 30px;
+  margin-top: 0;
+  color: #d71920;
+}
+
+.audio-guest-text p {
+  font-size: 18px;
+}
+
+.audio-price {
+  font-size: 20px !important;
+  margin: 25px 0;
+}
+
+.audio-guest-slideshow {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.audio-guest-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.audio-guest-slide.active {
+  display: block;
+}
+
+.audio-prev,
+.audio-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.65);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.audio-prev {
+  left: 12px;
+}
+
+.audio-next {
+  right: 12px;
+}
+
+.audio-prev:hover,
+.audio-next:hover {
+  background: #d71920;
+}
+
+@media (max-width: 850px) {
+  .audio-guest-content {
+    grid-template-columns: 1fr;
+  }
+
+  .audio-guest-slideshow {
+    height: 400px;
+  }
+} 
+
+.section-intro{max-width:850px;margin:0 auto 30px;text-align:center}.audio-guest-text .button{display:inline-block;background:#d71920;color:#fff;padding:13px 22px;border-radius:6px;text-decoration:none;font-weight:bold}.audio-guest-content{padding:10px 0 25px}
 </style>
 </head>
 <body>
@@ -42,8 +127,119 @@
 <section class="hero"><div class="wrap"><div><p class="eyebrow">PLANO, TEXAS PHOTO BOOTH RENTALS</p><h1>Make Your Plano Event a Photo Booth Favorite</h1><p>From wedding receptions and milestone birthdays to employee celebrations and conferences, a photo booth gives your Plano guests something fun to do—and a printed keepsake to take home.</p><p><strong>We offer the authentic Classic Enclosed Photo Booth experience, plus a modern Open-Air option.</strong></p><a class="btn" href="/#availability">Check Your Event Date</a><a class="btn light" href="/enclosed-photo-booth-dallas.html">See Our Enclosed Booth</a></div><img src="/images/enclosed/classic-enclosed-photo-booth.png" alt="Traditional enclosed photo booth for Plano Texas weddings and parties"></div></section>
 <section class="section"><div class="wrap split"><div><h2>Why Choose a Classic Enclosed Photo Booth?</h2><p>Remember squeezing into a real photo booth, closing the curtain and waiting for your photo strip? We bring that experience to Plano celebrations. Inside the booth, guests can relax, be goofy and create candid memories away from the crowd.</p><p>Our enclosed booth combines that classic private setting with a touch screen, instant photo prints and digital sharing. It's a natural fit for weddings, anniversary parties and any event where you want something a little different.</p><a class="btn" href="/enclosed-photo-booth-dallas.html">Explore the Classic Enclosed Booth</a></div><img loading="lazy" src="/images/enclosed/classic-enclosed-photo-booth.png" alt="Classic privacy-curtain photo booth available for Plano events"></div></section>
 <section class="section muted"><div class="wrap"><h2>Great for Plano Weddings, Company Parties and More</h2><div class="grid"><article class="panel"><h3>Weddings &amp; Receptions</h3><p>Give guests a break between dancing and celebrating. Personalized photo strips make keepsakes they'll remember long after the wedding.</p></article><article class="panel"><h3>Corporate Events</h3><p>Bring coworkers together at office parties, company celebrations, trade shows and employee appreciation events. Ask about a branded strip design.</p></article><article class="panel"><h3>Birthdays &amp; Milestones</h3><p>From sweet sixteens and quinceañeras to anniversary parties and reunions, guests of all ages can jump in for a picture.</p></article></div></div></section>
-<section class="section"><div class="wrap"><h2>Prefer Group Pictures? We Have Open-Air, Too.</h2><p>Our Open-Air Photo Booth is a great choice when you want more people in one shot. Choose from our selection of backdrops and let guests pose with friends, family or teammates. Both styles include an attendant and plenty of fun.</p><a href="/#backdrops">See our backdrop selection →</a></div></section>
+<section class="section"><div class="wrap split"><div><h2>Open-Air Photo Booths for Big Group Fun</h2><p>Want more friends or coworkers in each photo? Our <strong>Open-Air Photo Booth</strong> makes it easy for groups to pose together. Choose from our selection of backdrops and enjoy the same instant prints, props, digital sharing and friendly attendant included with our enclosed booth.</p><p><strong>Both booth styles start at $450 for up to 3 hours.</strong></p><a class="btn" href="/#backdrops">Explore Open-Air Backdrops</a></div><img loading="lazy" src="/images/open-air/open-air-photo-booth.png" alt="Open-air photo booth option for Plano weddings, company parties and group photos"></div></section>
 <section class="section muted"><div class="wrap"><h2>Plano Photo Booth Rental Pricing</h2><p><strong>Photo booth rentals start at $450 for up to 3 hours</strong>, with additional hours at $100 each. This standard pricing applies to both our Classic Enclosed and Open-Air booths in Plano.</p><ul class="bullets"><li>Delivery, setup and a friendly attendant</li><li>Unlimited photo booth sessions during your rental</li><li>Instant printed photo strips and digital sharing</li><li>Fun props and a personalized photo strip design</li><li>Choice of enclosed or open-air photo booth</li></ul><a class="btn" href="/#availability">Check Your Date &amp; Request a Quote</a></div></section>
 <section class="section faq"><div class="wrap"><h2>Plano Photo Booth Questions</h2><h3>Do you serve events throughout Plano?</h3><p>Yes. Photo Booths of Dallas is based in nearby Wylie and provides photo booth rentals throughout Plano and the Dallas–Fort Worth area.</p><h3>Can our company logo go on the photo strips?</h3><p>Yes. We can personalize photo strip designs for corporate events, weddings and private parties.</p><h3>Is the enclosed booth the same price as the open-air booth?</h3><p>Yes. Both currently start at $450 for up to 3 hours for events in Plano.</p><h3>How do we get started?</h3><p>Use our <a href="/#availability">date request form</a> or call us to discuss your Plano event.</p></div></section>
+<!-- AUDIO GUEST BOOK -->
+
+<section id="audio-guest-book" class="light">
+  <div class="container">
+
+    <h2>Audio Guest Book — Hear Their Memories Forever</h2>
+
+    <p class="section-intro">
+      Give your guests a fun way to leave you something more personal
+      than a signature. Our vintage-style Audio Guest Book lets your
+      guests pick up the phone and leave a recorded message you can
+      listen to for years to come.
+    </p>
+
+    <div class="audio-guest-content">
+
+      <div class="audio-guest-text">
+
+        <h3>Voices You'll Want to Hear Again</h3>
+
+        <p>
+          Funny stories, congratulations, marriage advice and heartfelt
+          messages from the people who shared your special day become
+          memories you can actually hear again.
+        </p>
+
+        <p>
+          The Audio Guest Book includes our vintage telephone,
+          cocktail table and sign.
+        </p>
+
+        <p>
+          After your event, your recordings are uploaded to a private
+          Dropbox folder and shared with you, so you can download,
+          save and listen to the messages anytime.
+        </p>
+
+        <p class="audio-price">
+          <strong>$250 Standalone • Only $100 When Added to Your Photo Booth or DJ Package</strong>
+        </p>
+
+        <a class="button button-primary" href="/#availability">
+          Check Your Event Date
+        </a>
+
+      </div>
+
+      <div class="audio-guest-slideshow">
+
+        <img class="audio-guest-slide active"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20001.jpg"
+             alt="Audio Guest Book rental in Dallas Fort Worth">
+
+        <img class="audio-guest-slide"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20002.jpg"
+             alt="Vintage telephone Audio Guest Book for weddings">
+
+        <img class="audio-guest-slide"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20003.jpg"
+             alt="Audio Guest Book setup for a Dallas wedding">
+
+        <img class="audio-guest-slide"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20004.jpg"
+             alt="Vintage phone guest book rental in Dallas">
+
+        <img class="audio-guest-slide"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20005.jpg"
+             alt="Wedding Audio Guest Book in Dallas Fort Worth">
+
+        <img class="audio-guest-slide"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20006.jpg"
+             alt="Recorded message guest book for weddings and parties">
+
+        <img class="audio-guest-slide"
+             src="/images/audio-guest-book/Audio%20Guest%20Book%20007.jpg"
+             alt="Photo Booths of Dallas Audio Guest Book">
+
+        <button class="audio-prev"
+                onclick="changeAudioSlide(-1)"
+                aria-label="Previous Audio Guest Book photo">&#10094;</button>
+
+        <button class="audio-next"
+                onclick="changeAudioSlide(1)"
+                aria-label="Next Audio Guest Book photo">&#10095;</button>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 </main><footer><strong>Photo Booths of Dallas</strong><p>Serving Plano and Dallas–Fort Worth Since 2011</p><p><a href="tel:2147243165">214-724-3165</a> · <a href="mailto:info@photoboothsofdallas.com">info@photoboothsofdallas.com</a></p><a href="/">Home</a> · <a href="/photo-booth-rental-wylie-tx.html">Wylie Photo Booth Rentals</a></footer>
+<script>
+// Audio Guest Book slideshow
+let audioSlideIndex = 0;
+const audioSlides = document.querySelectorAll('.audio-guest-slide');
+
+function showAudioSlide(index) {
+  if (!audioSlides.length) return;
+  audioSlides.forEach(slide => slide.classList.remove('active'));
+  audioSlideIndex = (index + audioSlides.length) % audioSlides.length;
+  audioSlides[audioSlideIndex].classList.add('active');
+}
+
+function changeAudioSlide(direction) {
+  showAudioSlide(audioSlideIndex + direction);
+}
+
+if (audioSlides.length > 1) {
+  setInterval(() => showAudioSlide(audioSlideIndex + 1), 2000);
+}
+</script>
 </body></html>
