@@ -1610,6 +1610,26 @@ setInterval(() => {
 }, 2000);
 </script>
 <script>
+// Audio Guest Book slideshow
+let audioSlideIndex = 0;
+const audioSlides = document.querySelectorAll('.audio-guest-slide');
+
+function showAudioSlide(index) {
+  if (!audioSlides.length) return;
+  audioSlides.forEach(slide => slide.classList.remove('active'));
+  audioSlideIndex = (index + audioSlides.length) % audioSlides.length;
+  audioSlides[audioSlideIndex].classList.add('active');
+}
+
+function changeAudioSlide(direction) {
+  showAudioSlide(audioSlideIndex + direction);
+}
+
+if (audioSlides.length > 1) {
+  setInterval(() => showAudioSlide(audioSlideIndex + 1), 4000);
+}
+</script>
+<script>
 function checkEventDate() {
   const dateInput = document.getElementById('event-date');
   const message = document.getElementById('date-message');
