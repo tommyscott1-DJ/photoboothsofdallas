@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/photo-booth-rentals-wylie-tx",
+      "redirect": "/photo-booth-rental-wylie-tx.html",
+      "statusCode": 301
+    }
+  ]
+}
