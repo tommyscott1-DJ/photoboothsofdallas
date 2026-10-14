@@ -4,6 +4,61 @@
       "route": "/photo-booth-rentals-wylie-tx",
       "redirect": "/photo-booth-rental-wylie-tx.html",
       "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-rockwall-tx",
+      "redirect": "/photo-booth-rental-rockwall-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-plano-tx",
+      "redirect": "/photo-booth-rental-plano-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-allen-tx",
+      "redirect": "/photo-booth-rental-allen-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-mckinney",
+      "redirect": "/photo-booth-rental-mckinney-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-prosper-tx",
+      "redirect": "/photo-booth-rental-prosper-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-richardson-tx",
+      "redirect": "/photo-booth-rental-richardson-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-rowlett-tx",
+      "redirect": "/photo-booth-rental-rowlett-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-sachse-tx",
+      "redirect": "/photo-booth-rental-sachse-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rental-garland",
+      "redirect": "/photo-booth-rental-garland-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-carrollton",
+      "redirect": "/photo-booth-rental-carrollton-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-addison",
+      "redirect": "/photo-booth-rental-addison-tx.html",
+      "statusCode": 301
     }
   ]
 }
