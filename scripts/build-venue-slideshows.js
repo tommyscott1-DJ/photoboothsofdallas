@@ -15,6 +15,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas at Blue Heron Landing in Wylie, Texas',
   caption: 'Blue Heron Landing event photo'
+}, {
+  page: 'event-1013-plano-photo-booth.html',
+  folder: 'images/venues/event-1013',
+  legacy: [],
+  alt: 'Photo Booths of Dallas at Event 1013 in Plano, Texas',
+  caption: 'Event 1013 photo'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
