@@ -59,6 +59,46 @@
       "route": "/photo-booth-rentals-addison",
       "redirect": "/photo-booth-rental-addison-tx.html",
       "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-fort-worth",
+      "redirect": "/photo-booth-rental-fort-worth-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-in-arlington-tx",
+      "redirect": "/photo-booth-rental-arlington-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-southlake-tx",
+      "redirect": "/photo-booth-rental-southlake-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-coppell",
+      "redirect": "/photo-booth-rental-coppell-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-denton",
+      "redirect": "/photo-booth-rental-denton-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-burleson-tx",
+      "redirect": "/photo-booth-rental-burleson-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-corinth",
+      "redirect": "/photo-booth-rental-corinth-tx.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/photo-booth-rentals-grapevine",
+      "redirect": "/photo-booth-rental-grapevine-tx.html",
+      "statusCode": 301
     }
   ]
 }
