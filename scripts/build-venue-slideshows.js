@@ -21,6 +21,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas at Event 1013 in Plano, Texas',
   caption: 'Event 1013 photo'
+}, {
+  page: 'white-sparrow-quinlan-photo-booth.html',
+  folder: 'images/venues/white-sparrow',
+  legacy: [],
+  alt: 'Photo Booths of Dallas at The White Sparrow wedding venue',
+  caption: 'The White Sparrow venue photo'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
