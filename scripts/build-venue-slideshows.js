@@ -51,6 +51,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas at McKinney Flour Mill in McKinney Texas',
   caption: 'McKinney Flour Mill event photo'
+}, {
+  page: 'verona-villa-frisco-photo-booth.html',
+  folder: 'images/venues/verona-villa',
+  legacy: [],
+  alt: 'Photo Booths of Dallas team at Verona Villa in Frisco Texas',
+  caption: 'Verona Villa event photo'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
