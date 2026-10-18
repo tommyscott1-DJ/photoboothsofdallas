@@ -45,6 +45,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas at Stone Crest Venue in McKinney Texas',
   caption: 'Stone Crest Venue event photo'
+}, {
+  page: 'mckinney-flour-mill-photo-booth.html',
+  folder: 'images/venues/mckinney-flour-mill',
+  legacy: [],
+  alt: 'Photo Booths of Dallas at McKinney Flour Mill in McKinney Texas',
+  caption: 'McKinney Flour Mill event photo'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
