@@ -19,6 +19,9 @@ jobs:
       - name: Build Audio Guest Book slideshow
         run: node scripts/build-audio-guest-slideshow.js
 
+      - name: Build main Events slideshow
+        run: node scripts/build-events-slideshow.js
+
       - name: Deploy website
         uses: Azure/static-web-apps-deploy@v1
         with:
