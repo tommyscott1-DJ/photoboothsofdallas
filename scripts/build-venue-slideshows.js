@@ -27,6 +27,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas at The White Sparrow wedding venue',
   caption: 'The White Sparrow venue photo'
+}, {
+  page: 'the-springs-mckinney-photo-booth.html',
+  folder: 'images/venues/the-springs-mckinney',
+  legacy: [],
+  alt: 'Photo Booths of Dallas Open-Air Photo Booth at The Springs at McKinney',
+  caption: 'Open-Air Photo Booth at The Springs at McKinney'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
