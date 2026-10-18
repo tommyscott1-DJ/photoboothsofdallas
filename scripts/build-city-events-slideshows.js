@@ -1,0 +1,17 @@
+// Place the shared Events slideshow above the two booth types on every city page.
+// Run AFTER build-events-slideshow.js so newly uploaded photos appear everywhere.
+const fs = require('node:fs');
+const path = require('node:path');
+const home = fs.readFileSync('index.html', 'utf8');
+const block = home.match(/<!-- EVENT_SLIDES_START -->([\s\S]*?)<!-- EVENT_SLIDES_END -->/);
+if (!block || !block[1].includes('class="slide')) throw new Error('Generated homepage Events photos not found');
+const photos = [...block[1].matchAll(/<img\b[^>]*>/g)].map(m=>m[0].replace(/class="slide(?: active)?"/,'class="city-event-slide"'));
+if (!photos.length) throw new Error('No event images available');
+const markup = '<!-- CITY_EVENTS_START --><div class="city-events" aria-label="Recent Photo Booths of Dallas events"><h2>Real Fun at Real Events</h2><div class="city-events-view">'+photos.join('\n')+'<button type="button" class="city-events-prev" aria-label="Previous event photo">&#10094;</button><button type="button" class="city-events-next" aria-label="Next event photo">&#10095;</button></div></div><!-- CITY_EVENTS_END -->';
+const css = '<!-- CITY_EVENTS_CSS_START --><style>.city-events{max-width:850px;margin:28px auto 30px;text-align:center}.city-events h2{color:#fff;font-size:clamp(22px,3vw,30px);margin:0 0 14px}.city-events-view{height:clamp(230px,43vw,440px);position:relative;overflow:hidden;background:#171717;border-radius:12px}.city-event-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;pointer-events:none}.city-event-slide.active{opacity:1}.city-events-prev,.city-events-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:white;border:0;border-radius:6px;padding:10px 13px;cursor:pointer;font-size:24px;z-index:2}.city-events-prev{left:8px}.city-events-next{right:8px}</style><!-- CITY_EVENTS_CSS_END -->';
+const js = '<!-- CITY_EVENTS_JS_START --><script>(function(){const box=document.querySelector(".city-events");if(!box)return;const slides=[...box.querySelectorAll(".city-event-slide")];if(!slides.length)return;let n=0;function show(i){slides[n].classList.remove("active");n=(i+slides.length)%slides.length;slides[n].classList.add("active")}slides[0].classList.add("active");box.querySelector(".city-events-prev").addEventListener("click",()=>show(n-1));box.querySelector(".city-events-next").addEventListener("click",()=>show(n+1));if(slides.length>1)setInterval(()=>show(n+1),5000)})();</script><!-- CITY_EVENTS_JS_END -->';
+const replaceOrInsert = (html,start,end,value,anchor) => html.includes(start) ? html.replace(new RegExp(start+'[\\s\\S]*?'+end),value) : html.replace(anchor,value+'\n'+anchor);
+const files=fs.readdirSync('.').filter(f=>/^photo-booth-rental-.*-tx\\.html$/.test(f));
+if(!files.length)throw new Error('No city pages found');
+for(const file of files){let html=fs.readFileSync(file,'utf8');if(!html.includes('<div class="city-booth-grid">'))throw new Error('Missing booth grid: '+file);html=replaceOrInsert(html,'<!-- CITY_EVENTS_START -->','<!-- CITY_EVENTS_END -->',markup,'<div class="city-booth-grid">');html=replaceOrInsert(html,'<!-- CITY_EVENTS_CSS_START -->','<!-- CITY_EVENTS_CSS_END -->',css,'</head>');html=replaceOrInsert(html,'<!-- CITY_EVENTS_JS_START -->','<!-- CITY_EVENTS_JS_END -->',js,'</body>');fs.writeFileSync(file,html)}
+console.log('Added '+photos.length+' shared Events photos to '+files.length+' city pages');
