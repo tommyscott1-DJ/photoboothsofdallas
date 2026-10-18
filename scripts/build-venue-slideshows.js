@@ -39,6 +39,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas at Primrose Hill Wedding and Events in Van Alstyne Texas',
   caption: 'Photo Booths of Dallas at Primrose Hill Wedding & Events'
+}, {
+  page: 'stone-crest-venue-mckinney-photo-booth.html',
+  folder: 'images/venues/stone-crest-venue',
+  legacy: [],
+  alt: 'Photo Booths of Dallas at Stone Crest Venue in McKinney Texas',
+  caption: 'Stone Crest Venue event photo'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
