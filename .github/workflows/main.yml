@@ -28,6 +28,9 @@ jobs:
       - name: Remove duplicate booth sections from city pages
         run: node scripts/remove-duplicate-city-booths.js
 
+      - name: Restore missing Open-Air booth images
+        run: node scripts/fix-city-booth-images.js
+
       - name: Update links to all city pages
         run: node scripts/build-city-links.js
 
