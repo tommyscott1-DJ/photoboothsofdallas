@@ -33,6 +33,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas Open-Air Photo Booth at The Springs at McKinney',
   caption: 'Open-Air Photo Booth at The Springs at McKinney'
+}, {
+  page: 'primrose-hill-van-alstyne-photo-booth.html',
+  folder: 'images/venues/primrose-hill-van-alstyne',
+  legacy: [],
+  alt: 'Photo Booths of Dallas at Primrose Hill Wedding and Events in Van Alstyne Texas',
+  caption: 'Photo Booths of Dallas at Primrose Hill Wedding & Events'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
