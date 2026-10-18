@@ -57,6 +57,12 @@ const venues = [{
   legacy: [],
   alt: 'Photo Booths of Dallas team at Verona Villa in Frisco Texas',
   caption: 'Verona Villa event photo'
+}, {
+  page: 'dvine-grace-vineyard-mckinney-photo-booth.html',
+  folder: 'images/venues/dvine-grace-vineyard',
+  legacy: [],
+  alt: 'Photo Booths of Dallas team at D’Vine Grace Vineyard in McKinney Texas',
+  caption: 'D’Vine Grace Vineyard event photo'
 }];
 const valid = /\.(jpe?g|png|webp|gif)$/i;
 const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
