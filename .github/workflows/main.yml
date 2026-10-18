@@ -25,6 +25,9 @@ jobs:
       - name: Add Events slideshow to city pages
         run: node scripts/build-city-events-slideshows.js
 
+      - name: Remove duplicate booth sections from city pages
+        run: node scripts/remove-duplicate-city-booths.js
+
       - name: Update links to all city pages
         run: node scripts/build-city-links.js
 
