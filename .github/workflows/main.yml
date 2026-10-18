@@ -25,6 +25,9 @@ jobs:
       - name: Add Events slideshow to city pages
         run: node scripts/build-city-events-slideshows.js
 
+      - name: Update links to all city pages
+        run: node scripts/build-city-links.js
+
       - name: Deploy website
         uses: Azure/static-web-apps-deploy@v1
         with:
