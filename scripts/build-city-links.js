@@ -1,7 +1,8 @@
 // Keep homepage and all city-page navigation synchronized with every city page.
 const fs=require('node:fs');
 const pages=fs.readdirSync('.').filter(f=>/^photo-booth-rental-.*-tx\.html$/.test(f)).sort();
-const names=Object.fromEntries(pages.map(f=>[f,f.replace(/^photo-booth-rental-|\-tx\.html$/g,'').split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ')]));
+const properNames={'the-colony':'The Colony','north-richland-hills':'North Richland Hills','farmers-branch':'Farmers Branch','grand-prairie':'Grand Prairie','flower-mound':'Flower Mound','little-elm':'Little Elm'};
+const names=Object.fromEntries(pages.map(f=>[f,properNames[f.replace(/^photo-booth-rental-|\-tx\.html$/g,'')]||f.replace(/^photo-booth-rental-|\-tx\.html$/g,'').split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ')]));
 const links=pages.map(f=>'<a href="/'+f+'">'+names[f]+', TX</a>');
 const homepage='index.html';
 let html=fs.readFileSync(homepage,'utf8');
