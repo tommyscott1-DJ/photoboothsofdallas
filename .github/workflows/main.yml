@@ -34,6 +34,9 @@ jobs:
       - name: Update links to all city pages
         run: node scripts/build-city-links.js
 
+      - name: Add printed photo strip messaging to city pages
+        run: node scripts/add-city-print-value.js
+
       - name: Center headlines on all city pages
         run: node scripts/center-city-headings.js
 
