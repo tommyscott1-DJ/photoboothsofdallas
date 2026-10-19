@@ -1,6 +1,11 @@
 {
   "routes": [
     {
+      "route": "/photo-booth-rentals-the-colony-tx",
+      "redirect": "/photo-booth-rental-the-colony-tx.html",
+      "statusCode": 301
+    },
+    {
       "route": "/home",
       "redirect": "/",
       "statusCode": 301
