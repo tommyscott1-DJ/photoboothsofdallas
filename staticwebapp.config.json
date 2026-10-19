@@ -1,6 +1,11 @@
 {
   "routes": [
     {
+      "route": "/home",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
       "route": "/contact",
       "redirect": "/#contact",
       "statusCode": 301
