@@ -1,0 +1,16 @@
+---
+layout: default
+title: Photo Booths of Dallas Blog
+description: Event highlights, photo booth tips, and wedding stories from Photo Booths of Dallas.
+---
+<section class="blog-hero"><h1>Photo Booths of Dallas Blog</h1><p>Real celebrations, fun memories, and photo booth ideas across Dallas–Fort Worth.</p></section>
+<section class="blog-list">
+{% for post in site.posts %}
+<article class="blog-card">
+{% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy"></a>{% endif %}
+<div><p class="blog-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.category %} · {{ post.category }}{% endif %}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.description | escape }}</p><a class="read-more" href="{{ post.url | relative_url }}">Read More →</a></div>
+</article>
+{% else %}
+<p>New event stories and photo booth tips are coming soon!</p>
+{% endfor %}
+</section>
