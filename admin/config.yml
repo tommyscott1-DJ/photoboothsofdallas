@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: tommyscott1-DJ/photoboothsofdallas
+  branch: main
+  # Requires a GitHub OAuth authentication service before login works.
+media_folder: "images/blog"
+public_folder: "/images/blog"
+site_url: "https://www.photoboothsofdallas.com"
+display_url: "https://www.photoboothsofdallas.com"
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Weddings", "Corporate Events", "School Events", "Photo Booth Tips", "Recent Events"]}
+      - {label: "Featured Photo", name: "image", widget: "image", required: false}
+      - {label: "Short Preview", name: "description", widget: "text"}
+      - {label: "Article", name: "body", widget: "markdown"}
