@@ -1,0 +1,6 @@
+title: Photo Booths of Dallas
+url: https://www.photoboothsofdallas.com
+permalink: /blog/:title/
+plugins: []
+exclude:
+  - README.md
