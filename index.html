@@ -214,9 +214,10 @@
 
     /* ABOVE-THE-FOLD PHOTO BOOTH PICTURE SLIDESHOW */
     .hero { padding: 38px 20px 45px; }
-    .hero h1 { font-size: clamp(32px, 4.4vw, 54px); }
-    .hero .anniversary { margin: 10px 0; }
-    .hero-description { margin: 8px auto 18px; }
+    .hero h1 { font-size: clamp(27px, 3.5vw, 43px); line-height: 1.12; margin-bottom: 7px; }
+    .hero .tagline { font-size: clamp(18px, 2.3vw, 27px); margin: 6px 0; }
+    .hero .anniversary { font-size: 12px; padding: 6px 12px; margin: 7px 0; }
+    .hero-description { font-size: 16px; line-height: 1.45; max-width: 700px; margin: 7px auto 13px; }
     .hero-photo-slideshow {
       position: relative;
       width: min(340px, 75vw);
@@ -240,9 +241,9 @@
     .hero-photo-slideshow:empty { display: none; }
     @media (max-width: 650px) {
       .hero { padding: 28px 14px 35px; }
-      .hero .tagline { font-size: 21px; }
+      .hero .tagline { font-size: 18px; }
       .hero .anniversary { font-size: 12px; padding: 7px 10px; }
-      .hero-description { font-size: 15px; }
+      .hero-description { font-size: 14px; }
       .hero-photo-slideshow { height: 205px; margin: 12px auto; }
     }
 
