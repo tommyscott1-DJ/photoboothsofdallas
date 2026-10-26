@@ -19,6 +19,9 @@ jobs:
       - name: Build Audio Guest Book slideshow
         run: node scripts/build-audio-guest-slideshow.js
 
+      - name: Build homepage photo booth picture slideshow
+        run: node scripts/build-hero-photo-booth-slideshow.js
+
       - name: Build main Events slideshow
         run: node scripts/build-events-slideshow.js
 
