@@ -869,6 +869,21 @@
       }
     }
   </style>
+<style>
+.inquiry-card{max-width:680px;margin:0 auto;padding:32px;background:#fff;color:#252b36;border-radius:18px;box-shadow:0 5px 25px #0001;text-align:left}
+.inquiry-card h2,.inquiry-card h3{text-align:center;margin:0 0 8px}
+.inquiry-card .section-intro{text-align:center;color:#626a75}
+.inquiry-card form>label{display:block;font-weight:600;margin:18px 0 6px}
+.inquiry-card form>input:not([type=hidden]),.inquiry-card textarea{box-sizing:border-box;width:100%;font:inherit;padding:12px;border:1px solid #b9c0ca;border-radius:8px;background:#fff;color:#252b36}
+.inquiry-card textarea{min-height:100px}
+.inquiry-card fieldset{border:0;padding:0;margin:0}
+.inquiry-card legend{font-weight:600;margin:18px 0 6px}
+.inquiry-card .choices label{display:block;font-weight:400;margin:8px 0}
+.inquiry-card .choices input{width:auto;margin-right:8px}
+.inquiry-card button[type=submit]{margin-top:22px;width:100%;background:#172b52;color:#fff;border:0;border-radius:8px;padding:15px;font-size:17px;cursor:pointer}
+.inquiry-card .small{text-align:center;font-size:13px;color:#626a75}
+@media(max-width:700px){.inquiry-card{padding:22px}}
+</style>
 </head>
 
 <body>
@@ -1497,40 +1512,34 @@
 </section>
 
 
-<section id="availability" class="contact">
-  <div class="container">
+<section id="availability" class="contact" aria-labelledby="inquiry-heading"><div class="container"><div class="inquiry-card"><h2 id="inquiry-heading">Photo Booths of Dallas</h2><h3>Request a Quote</h3><p class="section-intro">Tell us about your event! We'll personally respond with availability and pricing.</p><form action="https://formsubmit.co/info@photoboothsofdallas.com" method="POST">
+<input type="hidden" name="_subject" value="New Photo Booths of Dallas Inquiry">
+<input type="hidden" name="_url" value="https://www.photoboothsofdallas.com/request-quote.html">
+<input type="hidden" name="_captcha" value="true">
 
-    <h2>Is Your Date Available?</h2>
-
-    <p class="section-intro">
-      Choose your event date below. We'll take you to our quick
-      event form so we can confirm availability and get the details
-      about your celebration.
-    </p>
-
-    <div class="date-checker">
-
-      <label for="event-date">
-        <strong>Select Your Event Date</strong>
-      </label>
-
-      <input type="date" id="event-date">
-
-      <button class="button button-primary"
-              type="button"
-              onclick="checkEventDate()">
-        Check My Date
-      </button>
-
-      <div id="date-message"></div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section class="light" aria-labelledby="test-inquiry-heading"><div class="container" style="text-align:center"><h2 id="test-inquiry-heading">Try Our New Inquiry Form</h2><p>Our new photo booth inquiry form is available alongside the existing date checker while we test email delivery.</p><a class="button button-primary" href="/request-quote.html">New Photo Booth Inquiry Form</a></div></section>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<label for="name">Your Name *</label><input id="name" name="Name" required autocomplete="name">
+<label for="email">Email Address *</label><input id="email" type="email" name="email" required autocomplete="email">
+<label for="phone">Phone Number (optional)</label><input id="phone" type="tel" name="Phone" autocomplete="tel">
+<label for="date">Event Date *</label><input id="date" type="date" name="Event Date" required>
+<fieldset><legend>Type of Event</legend><div class="choices">
+<label><input type="radio" name="Event Type" value="Wedding" checked>Wedding</label>
+<label><input type="radio" name="Event Type" value="Birthday / Quinceañera">Birthday / Quinceañera</label>
+<label><input type="radio" name="Event Type" value="Corporate Event">Corporate Event</label>
+<label><input type="radio" name="Event Type" value="School Event">School Event</label>
+<label><input type="radio" name="Event Type" value="Other">Other</label>
+</div></fieldset>
+<fieldset><legend>Photo Booth Preference</legend><div class="choices">
+<label><input type="radio" name="Booth Preference" value="Classic Enclosed" checked>Classic Enclosed Photo Booth</label>
+<label><input type="radio" name="Booth Preference" value="Open-Air">Open-Air Photo Booth</label>
+<label><input type="radio" name="Booth Preference" value="Not Sure">Not Sure Yet</label>
+</div></fieldset>
+<label for="location">Event Location / Venue</label><input id="location" name="Event Location" placeholder="Venue name or city">
+<label for="time">Event Time / Hours Needed</label><input id="time" name="Event Time" placeholder="Example: 6 PM – 9 PM">
+<label for="details">Additional Details</label><textarea id="details" name="Additional Details" placeholder="Anything else we should know?"></textarea>
+<button type="submit">Send My Inquiry</button>
+<p class="small">We personally review and reply to inquiries. Submitting this form does not confirm availability or a booking.</p>
+</form></div></div></section>
 
 <section id="contact" class="light contact">
   <div class="container">
@@ -1672,25 +1681,6 @@ function changeAudioSlide(direction) {
 
 if (audioSlides.length > 1) {
   setInterval(() => showAudioSlide(audioSlideIndex + 1), 2000);
-}
-</script>
-<script>
-function checkEventDate() {
-  const dateInput = document.getElementById('event-date');
-  const message = document.getElementById('date-message');
-
-  if (!dateInput.value) {
-    message.textContent = 'Please select your event date first.';
-    return;
-  }
-
-  message.innerHTML =
-    'Great! Let’s get a few details about your event...';
-
-  setTimeout(function() {
-    window.location.href =
-      'https://docs.google.com/forms/d/e/1FAIpQLSdK8I4w2LYtn2YxjtMDDjISIlE8mW3ejw3x-ymP00rW18SE6Q/viewform?usp=header';
-  }, 1200);
 }
 </script>
 <script>
