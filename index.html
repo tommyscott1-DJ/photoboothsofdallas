@@ -220,8 +220,9 @@
     .hero-description { font-size: 16px; line-height: 1.45; max-width: 700px; margin: 7px auto 13px; }
     .hero-photo-slideshow {
       position: relative;
-      width: min(520px, 90vw);
-      height: clamp(260px, 38vh, 380px);
+      width: min(1060px, 100%);
+      aspect-ratio: 16 / 9;
+      height: auto;
       margin: 18px auto;
       overflow: hidden;
       border-radius: 12px;
@@ -244,7 +245,7 @@
       .hero .tagline { font-size: 18px; }
       .hero .anniversary { font-size: 12px; padding: 7px 10px; }
       .hero-description { font-size: 14px; }
-      .hero-photo-slideshow { width: min(94vw, 440px); height: 290px; margin: 12px auto; }
+      .hero-photo-slideshow { width: 100%; height: auto; margin: 12px auto; }
     }
 
     /* GENERAL */
