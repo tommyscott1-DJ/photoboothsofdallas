@@ -1063,7 +1063,7 @@
     <div class="wedding-content">
 
       <div>
-        <h3>The Scrapbook Is Our Gift to You!</h3>
+        <h3>Wedding Scrapbook / Memory Book — Our Gift to You!</h3>
 
         <p>
           While your guests are having fun in the photo booth, we'll
@@ -1073,12 +1073,12 @@
 
         <p>
           <strong>
-            We don't charge extra for it. It's our wedding gift to you!
+            Included free with wedding and birthday photo booth rentals!
           </strong>
         </p>
 
         <p>
-          At the end of the night, your guests leave with their photo
+          At the end of the celebration, your guests leave with their photo
           strips — and you leave with a scrapbook full of photos and
           messages from the people who celebrated with you.
         </p>
@@ -1089,7 +1089,7 @@
       </div>
 
 
-      <div class="wedding-slideshow">
+      <div class="wedding-slideshow" id="memory-book-slideshow" aria-label="Scrapbook and Memory Book photo slideshow">
 
         <img class="wedding-slide active"
              src="images/weddings/wedding-photo-booth-dallas-01.jpg"
@@ -1735,5 +1735,30 @@ if (audioSlides.length > 1) {
   });
 })();
 </script>
-</body>
+<script>
+/* Scrapbook / Memory Book photos: load images uploaded to images/memory-book.
+   Keep the existing wedding photos until memory book photos are available. */
+(async function(){
+  const gallery=document.getElementById('memory-book-slideshow');
+  if(!gallery)return;
+  try{
+    const response=await fetch('https://api.github.com/repos/tommyscott1-DJ/photoboothsofdallas/contents/images/memory-book?ref=main',{headers:{Accept:'application/vnd.github+json'}});
+    if(!response.ok)return;
+    const files=await response.json();
+    const names=files.filter(file=>file.type==='file'&&/\.(jpg|jpeg|png|webp|gif)$/i.test(file.name)).map(file=>file.name).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+    if(!names.length)return;
+    gallery.querySelectorAll('img.wedding-slide').forEach(img=>img.remove());
+    const next=gallery.querySelector('.wedding-prev');
+    names.forEach((name,i)=>{
+      const img=document.createElement('img');
+      img.className='wedding-slide'+(i===0?' active':'');
+      img.src='/images/memory-book/'+encodeURIComponent(name);
+      img.alt='Photo Booths of Dallas wedding scrapbook and memory book example '+(i+1);
+      img.loading=i===0?'eager':'lazy';
+      gallery.insertBefore(img,next);
+    });
+    if(typeof weddingSlideIndex!=='undefined')weddingSlideIndex=0;
+  }catch(error){console.warn('Memory Book slideshow:',error)}
+})();
+</script></body>
 </html>
