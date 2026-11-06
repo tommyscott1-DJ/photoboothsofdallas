@@ -1637,9 +1637,11 @@ setInterval(() => {
 
 <script>
 let weddingSlideIndex = 0;
-const weddingSlides = document.querySelectorAll('.wedding-slide');
+const getWeddingSlides = () => document.querySelectorAll('#memory-book-slideshow .wedding-slide');
 
 function showWeddingSlide(index) {
+  const weddingSlides = getWeddingSlides();
+  if (!weddingSlides.length) return;
   weddingSlides.forEach(slide => slide.classList.remove('active'));
 
   weddingSlideIndex =
@@ -1654,7 +1656,7 @@ function changeWeddingSlide(direction) {
 
 setInterval(() => {
   showWeddingSlide(weddingSlideIndex + 1);
-}, 2000);
+}, 1000);
 </script>
 
 <script>
