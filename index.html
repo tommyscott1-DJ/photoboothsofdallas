@@ -1090,34 +1090,19 @@
 
 
       <div class="wedding-slideshow" id="memory-book-slideshow" aria-label="Scrapbook and Memory Book photo slideshow">
-
-        <img class="wedding-slide active"
-             src="images/weddings/wedding-photo-booth-dallas-01.jpg"
-             alt="Wedding photo booth rental in Dallas Fort Worth">
-
-        <img class="wedding-slide"
-             src="images/weddings/wedding-photo-booth-dallas-02.jpg"
-             alt="Guests enjoying a Photo Booths of Dallas wedding">
-
-        <img class="wedding-slide"
-             src="images/weddings/wedding-photo-booth-dallas-03.jpg"
-             alt="Dallas wedding guests enjoying a photo booth">
-
-        <img class="wedding-slide"
-             src="images/weddings/wedding-photo-booth-dallas-04.jpg"
-             alt="Wedding photo booth fun in Dallas Fort Worth">
-
-        <img class="wedding-slide"
-             src="images/weddings/wedding-photo-booth-dallas-05.jpg"
-             alt="Photo Booths of Dallas wedding event">
-
-        <img class="wedding-slide"
-             src="images/weddings/wedding-photo-booth-dallas-06.jpg"
-             alt="Wedding guests posing in a Dallas photo booth">
-
-        <img class="wedding-slide"
-             src="images/weddings/Photo%20Booths%20of%20Dallas%20%20Jacq%20Tess%20Cinnamon%20Barn.jpg"
-             alt="Jacq and Tess wedding photo booth at The Cinnamon Barn">
+        <img class="wedding-slide active" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2014.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 1">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2015.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 2" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2030.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 3" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2031.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 4" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2032.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 5" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2033.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 6" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2034.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 7" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2035.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 8" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2036.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 9" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2037.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 10" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2038.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 11" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2039.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 12" loading="lazy">
+        <img class="wedding-slide" src="/images/memory-book/Photo%20Booths%20of%20Dallas%20Hidden%20Creek%2040.jpg" alt="Photo Booths of Dallas scrapbook memory book at Hidden Creek wedding — photo 13" loading="lazy">
 
         <button class="wedding-prev"
                 onclick="changeWeddingSlide(-1)"
@@ -1737,30 +1722,5 @@ if (audioSlides.length > 1) {
   });
 })();
 </script>
-<script>
-/* Scrapbook / Memory Book photos: load images uploaded to images/memory-book.
-   Keep the existing wedding photos until memory book photos are available. */
-(async function(){
-  const gallery=document.getElementById('memory-book-slideshow');
-  if(!gallery)return;
-  try{
-    const response=await fetch('https://api.github.com/repos/tommyscott1-DJ/photoboothsofdallas/contents/images/memory-book?ref=main',{headers:{Accept:'application/vnd.github+json'}});
-    if(!response.ok)return;
-    const files=await response.json();
-    const names=files.filter(file=>file.type==='file'&&/\.(jpg|jpeg|png|webp|gif)$/i.test(file.name)).map(file=>file.name).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
-    if(!names.length)return;
-    gallery.querySelectorAll('img.wedding-slide').forEach(img=>img.remove());
-    const next=gallery.querySelector('.wedding-prev');
-    names.forEach((name,i)=>{
-      const img=document.createElement('img');
-      img.className='wedding-slide'+(i===0?' active':'');
-      img.src='/images/memory-book/'+encodeURIComponent(name);
-      img.alt='Photo Booths of Dallas wedding scrapbook and memory book example '+(i+1);
-      img.loading=i===0?'eager':'lazy';
-      gallery.insertBefore(img,next);
-    });
-    if(typeof weddingSlideIndex!=='undefined')weddingSlideIndex=0;
-  }catch(error){console.warn('Memory Book slideshow:',error)}
-})();
-</script></body>
+</body>
 </html>
